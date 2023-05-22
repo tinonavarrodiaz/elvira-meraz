@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Splash from '../components/Splash.astro';
+---
+
+<Layout title="Elvira Meraz">
+  <Splash />
+  <section class="main">
+    <div class="image-main">
+      <a href="/" class="btn">
+        <img src="/donate-button@2x.png" alt="Donate" />
+      </a>
+      <picture>
+        <source
+          srcset="/elvira-meraz@4x-100.jpg"
+          media="(min-width:1921px) and (orientation:landscape)"
+        />
+        <source
+          srcset="/elvira-meraz@3x-100.jpg"
+          media="(min-width:1600px) and (orientation:landscape)"
+        />
+        <source
+          srcset="/elvira-meraz@2x-100.jpg"
+          media="(min-width:1024px) and (orientation:landscape)"
+        />
+        <source
+          srcset="/elvira-meraz-small@3x-100.jpg"
+          media="(min-width:1024px) and (orientation:portrait)"
+        />
+        <source
+          srcset="/elvira-meraz-small@2x-100.jpg"
+          media="(min-width:678px) and (orientation:portrait)"
+        />
+        <!-- <source
+        srcset="/elvira-meraz-small-100.jpg"
+        media="(min-width:678px) and (orientation:portrait"
+      /> -->
+        <source
+          srcset="/elvira-meraz@2-100.jpg"
+          media="(max-width:768px) and (orientation:ladscape)"
+        />
+        <source
+          srcset="/elvira-meraz-small-100.jpg"
+          media="(orientation:portrait)"
+        />
+        <source srcset="/elvira-meraz-100.jpg" media="(min-width:768px)" />
+        <img src="/elvira-meraz-100.jpg" alt="Elvira Meraz" />
+      </picture>
+    </div>
+    <div class="bottom">
+      <div class="bottom-img">
+        <picture>
+          <source srcset="/logo2@2x.png" media="(orientation:landscape)" />
+          <source srcset="/logo2-small@2x.png" media="(orientation:portrait)" />
+          <img src="/logo2.png" alt="Logo2" />
+        </picture>
+      </div>
+      <a href="/" class="button-btn">
+        <img src="/donate-button-small@2x.png" alt="Donate" />
+      </a>
+    </div>
+  </section>
+</Layout>
+<style>
+  @media (orientation: landscape) {
+    .button-btn {
+      display: none;
+    }
+  }
+  @media (orientation: portrait) {
+    .btn {
+      display: none;
+    }
+  }
+  .btn {
+    position: absolute;
+    width: calc((60500 / 1920) * 1vw);
+    top: calc(29400 / 1920 * 1vw);
+    left: calc(24600 / 1920 * 1vw);
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .btn {
+      top: 50%;
+      transform: translateY(-100%);
+    }
+  }
+  .bottom {
+    position: absolute;
+    width: 100vw;
+    height: calc(20000 / 1920 * 1vw);
+    background-color: var(--body-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: calc((3000 / 1920) * 1vw);
+    /* bottom: 0; */
+    /* display: none; */
+  }
+
+  .bottom-img {
+    /* width: 200px; */
+    height: 70%;
+    /* background-color: lime; */
+  }
+  .bottom-img img {
+    /* display: none; */
+    height: 100%;
+    width: auto;
+  }
+  @media (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .image-main {
+      height: 90vh;
+    }
+    .image-main img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  @media (orientation: portrait) {
+    img {
+      width: 100%;
+    }
+    .bottom {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 4.77vw;
+      height: 40vh;
+      width: 100vw;
+      left: 0;
+      bottom: 0;
+    }
+    .bottom img {
+      width: 100%;
+      height: auto;
+    }
+    .bottom-img {
+      /* width: unset; */
+      width: 65vw;
+      height: unset;
+      margin: 0 auto;
+    }
+    .button-btn {
+      width: 32vw;
+      /* max-width: 300px; */
+      /* display: none; */
+    }
+  }
+</style>
+<!--
+  265 - 100
+  185 -
+ -->

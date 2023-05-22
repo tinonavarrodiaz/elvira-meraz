@@ -138,11 +138,11 @@ import Splash from '../components/Splash.astro';
       align-items: center;
       justify-content: center;
       row-gap: 4.77vw;
-      height: calc(40vh + 1em);
+      height: calc(45vh + 0em);
       width: 100vw;
       left: 0;
       bottom: 0;
-      padding-bottom: 3em;
+      padding-bottom: 4em;
     }
     .bottom img {
       width: 100%;
@@ -158,6 +158,18 @@ import Splash from '../components/Splash.astro';
       width: 32vw;
       /* max-width: 300px; */
       /* display: none; */
+    }
+  }
+  @media (orientation: portrait) {
+    .image-main {
+      height: 60vh;
+    }
+    .image-main img,
+    .image-main picture {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center top;
     }
   }
 </style>
